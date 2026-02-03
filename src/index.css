@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #F5F5F5;
+  color: #333333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom component classes */
+@layer components {
+  /* Button styles */
+  .btn-primary {
+    @apply bg-vsee-primary text-white px-4 py-2 rounded font-medium
+           hover:bg-vsee-primary-dark transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-vsee-primary focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-vsee-primary border border-vsee-primary px-4 py-2 rounded font-medium
+           hover:bg-vsee-primary hover:text-white transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-vsee-primary focus:ring-offset-2;
+  }
+
+  .btn-danger {
+    @apply bg-status-error text-white px-4 py-2 rounded font-medium
+           hover:bg-red-700 transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-status-error focus:ring-offset-2;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-card shadow-card p-4;
+  }
+
+  .card-hover {
+    @apply bg-white rounded-card shadow-card p-4
+           hover:shadow-card-hover transition-shadow duration-200;
+  }
+
+  /* Form input styles */
+  .input {
+    @apply w-full px-3 py-2 border border-neutral-gray-300 rounded
+           focus:outline-none focus:ring-2 focus:ring-vsee-primary focus:border-transparent
+           placeholder-neutral-gray-400;
+  }
+
+  .input-error {
+    @apply border-status-error focus:ring-status-error;
+  }
+
+  /* Badge styles */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-warning {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+
+  .badge-error {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .badge-info {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  /* Status indicators */
+  .status-dot {
+    @apply w-2 h-2 rounded-full inline-block mr-2;
+  }
+
+  .status-online {
+    @apply bg-status-success;
+  }
+
+  .status-offline {
+    @apply bg-neutral-gray-400;
+  }
+
+  .status-warning {
+    @apply bg-status-warning;
+  }
+
+  /* Module tabs */
+  .module-tab {
+    @apply px-4 py-2 text-sm font-medium text-neutral-gray-600
+           hover:text-vsee-primary hover:bg-neutral-gray-100
+           transition-colors duration-200 cursor-pointer;
+  }
+
+  .module-tab-active {
+    @apply text-vsee-primary border-b-2 border-vsee-primary bg-white;
+  }
+
+  /* Table styles */
+  .table-header {
+    @apply bg-neutral-gray-100 text-neutral-gray-700 text-xs font-semibold uppercase tracking-wider;
+  }
+
+  .table-row {
+    @apply border-b border-neutral-gray-200 hover:bg-neutral-gray-100 transition-colors;
+  }
+
+  .table-cell {
+    @apply px-4 py-3 text-sm text-neutral-gray-700;
+  }
+
+  /* Sidebar navigation */
+  .sidebar-item {
+    @apply flex items-center px-4 py-3 text-neutral-gray-600
+           hover:bg-neutral-gray-100 hover:text-vsee-primary
+           transition-colors duration-200 cursor-pointer;
+  }
+
+  .sidebar-item-active {
+    @apply bg-vsee-primary bg-opacity-10 text-vsee-primary border-l-4 border-vsee-primary;
+  }
+}
+
+/* ONC-HIT Certification Badge */
+.onc-hit-badge {
+  @apply inline-flex items-center px-3 py-1 bg-blue-50 border border-blue-200 rounded text-xs text-blue-700 font-medium;
+}
+
+/* Custody status highlight (RED or BOLD as per requirements) */
+.custody-status-alert {
+  @apply text-status-error font-bold;
+}
+
+/* AI confidence score */
+.ai-confidence {
+  @apply inline-flex items-center px-2 py-1 rounded text-xs font-medium;
+}
+
+.ai-confidence-high {
+  @apply bg-green-100 text-green-800;
+}
+
+.ai-confidence-medium {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.ai-confidence-low {
+  @apply bg-red-100 text-red-800;
+}
+
+/* Interoperability indicators */
+.interop-badge {
+  @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium mr-1;
+}
+
+.interop-hl7 {
+  @apply bg-purple-100 text-purple-800;
+}
+
+.interop-fhir {
+  @apply bg-orange-100 text-orange-800;
+}
+
+.interop-ccda {
+  @apply bg-teal-100 text-teal-800;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
