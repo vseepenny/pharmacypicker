@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 import type { ModuleType } from '../types';
+import DHSLogo from './DHSLogo';
 
 interface HeaderProps {
   currentModule: ModuleType;
@@ -68,9 +69,7 @@ export default function Header({
 
               {/* DHS/ICE Logo and Branding */}
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-white rounded flex items-center justify-center">
-                  <span className="text-vsee-primary font-bold text-sm">DHS</span>
-                </div>
+                <DHSLogo size={42} className="flex-shrink-0" />
                 <div className="hidden sm:block">
                   <div className="font-semibold text-sm">ICE Health Service Corps</div>
                   <div className="text-xs text-white/80">Electronic Health Record</div>

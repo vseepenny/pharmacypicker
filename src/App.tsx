@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom';
 import Header from './components/Header';
+import DHSLogo from './components/DHSLogo';
 import EHRModule from './pages/EHRModule';
 import PharmacyModule from './pages/PharmacyModule';
 import MARModule from './pages/MARModule';
@@ -23,9 +24,7 @@ function Sidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
       <div className="fixed left-0 top-0 h-full w-72 bg-white shadow-xl z-50 overflow-y-auto">
         <div className="p-4 border-b border-neutral-gray-200">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-vsee-primary rounded flex items-center justify-center">
-              <span className="text-white font-bold text-sm">DHS</span>
-            </div>
+            <DHSLogo size={44} />
             <div>
               <div className="font-semibold text-neutral-gray-700">ICE IHSC EHR</div>
               <div className="text-xs text-neutral-gray-500">v4.2.1</div>
