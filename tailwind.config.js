@@ -7,10 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        // VSee Clinic Primary Colors (from Figma)
-        'vsee-primary': '#009688',
-        'vsee-primary-dark': '#00796B',
-        'vsee-primary-light': '#4DB6AC',
+        // Primary Colors - Navy Blue (DHS/ICE Branding)
+        'vsee-primary': '#003366',
+        'vsee-primary-dark': '#002244',
+        'vsee-primary-light': '#004488',
 
         // DHS/ICE Branding
         'dhs-blue': '#003366',
@@ -39,7 +39,7 @@ export default {
         'risk-low': '#388E3C',
 
         // Module Colors
-        'module-ehr': '#009688',
+        'module-ehr': '#003366',
         'module-pharmacy': '#7B1FA2',
         'module-mar': '#1976D2',
         'module-dental': '#00ACC1',
